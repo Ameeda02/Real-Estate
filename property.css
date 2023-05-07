@@ -1,0 +1,160 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li {
+    display: inline;
+    float: left;
+}
+a {
+    display: block;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    color: #111;
+}
+li >input {
+    margin-right: 50px;
+    margin-left: 350px;
+    margin-top: 10px;
+    width: 25%;
+    height: 10%;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #fffefc;
+}
+li >button {
+    margin-right: 50px;
+    margin-left: 350px;
+    margin-top: 10px;
+    width: 25%;
+    height: 10%;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #fffefc;
+}
+li >button:hover {
+    background-color: lightgray;
+}
+li a:hover {
+    background-color: lightgrey;
+}
+body {
+    background: linear-gradient(
+        to right,
+        #fafafa 0%,
+        #fafafa 50%,
+        #e7decc 50%,
+        #e7decc 100%
+        
+    );
+    grid-template-columns: 2fr 1fr;
+}
+.article {
+    margin-top: 5%;
+    grid-template-columns: 2fr 1fr;
+    padding: 0px 0px 0px 1rem;
+    text-align: left;
+    margin-left: 3rem;
+}
+.article .title {
+    font-size: 520%;
+    font-family: 'Trebuchet MS';
+    letter-spacing: 10%;
+}
+.article >p {
+    font-family: 'Trebuchet MS'; 
+    font-size: 80%;
+    margin-top: 1rem;
+    letter-spacing: 20%;
+}
+.button >button {
+    color: white;
+    background-color: rgb(255, 102, 0);
+    width: 10%;
+    height: 35px;
+    margin-top: 24px;
+    margin-bottom: 20px;
+}
+.button >button:hover {
+    background-color: rgb(255, 51, 0);
+    cursor: pointer;
+}
+.i {
+    color: black;
+    size-adjust: 35px;
+}
+.row {
+    display: inline-grid;
+    grid-template-rows: repeat(2, [row-start] 1fr);
+    grid-gap: 1px;
+    place-items: right;
+    height: auto;
+    flex-wrap: wrap;
+    margin-left: 350px;
+}
+/*----*/
+.column {
+    display: inline-grid;
+    grid-template-columns: repeat(3, [col-start] 1fr);
+    grid-gap: 1px;
+    flex: 50%;
+    max-width: 100%;
+    background-origin: padding-box;
+    max-height: 100%;
+    margin-top: none;
+    margin-left: 350px;
+}
+.column >img {
+    margin-top: none;
+    vertical-align: text-top;
+    width: 100%;
+    height:auto;
+    margin-left: none;
+}
+.row >img {
+    margin-top: none;
+    vertical-align: text-top;
+    width: 100%;
+    margin-left: none;
+}
+/*Responsive layout - makes a two column-layout instead of four columns*/
+@media screen and (max-width: 400px) {
+    .column {
+        flex: 50%;
+        max-width: 100%;
+    }
+}
+
+/*Responsible layout - makes the two columnd stack on top of each other instead of next to each other*/
+@media screen and (max-width: 300px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+.ads {
+    margin: 2rem auto;
+    padding: 0px 0.5rem;
+    list-style-type: none;
+    max-width: 40rem;
+    max-height: 40%;
+    color: black;
+}
+.ads > p {
+    color: black;
+    text-decoration-color: #fafafa;
+    line-height: 3rem;
+}
+.ads > hr {
+    margin-top: 2rem;
+}
